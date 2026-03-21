@@ -1,9 +1,14 @@
 import React from 'react'
 
-const ProductDetails = () => {
-  return (
-    <div>ProductDetails Page</div>
-  )
+interface ProductDetailsProps {
+    params: {
+        id: string
+    }
+}
+const ProductDetails = ({ params }: ProductDetailsProps) => {
+    return (
+        <div>ProductDetails Page{params.id}</div>
+    )
 }
 
 export default ProductDetails
