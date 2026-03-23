@@ -1,16 +1,19 @@
-import Counter from "./Counter/Counter";
+'use cleint'
+import { Suspense } from "react";
+import Usersuspense from "./Components/Usersuspense";
 
+const Skeleton = () => {
+  return <div  className="w-full h-[200px] bg-green-200 animate-pulse"></div>
+}
 export default async function Home() {
-
-  const response = await fetch('https://dummyjson.com/products')
-  const data = await response.json()
-  console.log(data);
-  return <div>
-      <Counter />
-   {
-    data.products?.map((product: any) => {
-      <li>{product.title}</li>
-    })
-   }
-  </div>;
+  const data = new Date().toLocaleTimeString();
+  return (
+    <div>
+      <p>Current server time: {data}</p>
+      <Suspense fallback={<Skeleton />}>
+          <Usersuspense />
+      </Suspense>
+    
+    </div>
+  );
 }
