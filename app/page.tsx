@@ -9,7 +9,7 @@ export default async function Home() {
   const data = new Date().toLocaleTimeString();
   return (
     <div>
-      <p>Current server time: {data}</p>
+      <p>Current server time:- {data}</p>
       <Suspense fallback={<Skeleton />}>
           <Usersuspense />
       </Suspense>
