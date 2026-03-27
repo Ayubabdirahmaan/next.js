@@ -13,7 +13,7 @@ export default async function Home() {
       <Suspense fallback={<Skeleton />}>
           <Usersuspense />
       </Suspense>
-    
+    <p>hello world</p>
     </div>
   );
 }
