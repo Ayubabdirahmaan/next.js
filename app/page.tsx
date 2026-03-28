@@ -1,19 +1,13 @@
-'use cleint'
-import { Suspense } from "react";
-import Usersuspense from "./Components/Usersuspense";
+import React from 'react'
+import { greet } from './form/action'
 
-const Skeleton = () => {
-  return <div  className="w-full h-[200px] bg-green-200 animate-pulse"></div>
-}
-export default async function Home() {
-  const data = new Date().toLocaleTimeString();
+const HomePage = () => {
   return (
-    <div>
-      <p>Current server time:- {data}</p>
-      <Suspense fallback={<Skeleton />}>
-          <Usersuspense />
-      </Suspense>
-    <p>hello world</p>
-    </div>
-  );
+    <form action={greet}>
+        <input type="text" name='name' />
+        <button>submit</button>
+    </form>
+  )
 }
+
+export default HomePage
