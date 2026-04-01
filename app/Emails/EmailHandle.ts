@@ -10,6 +10,6 @@ export async function eamilHandle(prevState: emailState, formData: FormData): Pr
         return { email: '', error: 'email is required!' }
     }
 
-    return { email: `Hell welcome ${email}`, error: '' }
+    return { email: `Hell welcome ${email}`, error: 'No error data successfully!' }
 
 }
