@@ -15,7 +15,12 @@ const EmailHandle = () => {
             <button>submit</button>
             {
                 state.email && (
-                    <p>{state.email}</p>
+                    <p className="text-5xl">{state.email}</p>
+                )
+            }
+            {
+                state.error && (
+                    <p>{state.error}</p>
                 )
             }
         </form>
