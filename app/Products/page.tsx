@@ -10,7 +10,7 @@ const ProductPage = async () => {
   return (
     <div>
         <p>🕒 timestemp at: 20s fetching {timestemp}</p>
-        <button onClick={revalidateProduct}>🔄 Revalidate</button>
+        <button onClick={() => revalidateProduct}>🔄 Revalidate</button>
     </div>
   )
 }
