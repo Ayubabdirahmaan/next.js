@@ -6,7 +6,7 @@ const ProductPage = async () => {
         next: { tags: ['products'] }
     })
     const data = await res.json()
-    const timestemp = new Date().toLocaleTimeString()
+    const timestemp = new Date().toLocaleTimeString() 
     return (
         <div>
             <p>🕒 timestemp at: 20s fetching {timestemp}</p>
